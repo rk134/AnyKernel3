@@ -482,7 +482,24 @@ do_devicecheck;
 do_versioncheck;
 do_levelcheck;
 
-ui_print "Installing...";
+ui_print "|==========================================|";
+ui_print "|      _       _             _     _       |";
+ui_print "|     | |     (_)           (_)   | |      |";
+ui_print "|     | |      _  ____ _   _ _  __| |      |";
+ui_print "|     | |     | |/ _  | | | | |/ _  |      |";
+ui_print "|     | |_____| | |_| | |_| | ( (_| |      |";
+ui_print "|     |_______)_|\__  |____/|_|\____|      |";
+ui_print "|                   |_|                    |";
+ui_print "|==========================================|";
+ui_print "|  Kernel         : Liquid-Kernel          |";
+ui_print "|  Version        : WATER-X1.1             |";
+ui_print "|  Device         : Redmi 5 Plus           |";
+ui_print "|  Linux version  : 4.9.y                  |";
+ui_print "|  Compiler       : evaGCC with LTO        |";
+ui_print "|  Maintainer     : rk134                  |";
+ui_print "|==========================================|";
+ui_print "|  AnyKernel3 by osm0sis @xda-developers.  |";
+ui_print "|==========================================|";
 CORE=$($BB grep -oE 'ak.*core.sh' anykernel.sh);
 [ -f tools/$CORE ] || $BB ln -s $AKHOME/tools/ak*-core.sh $AKHOME/tools/$CORE;
 PATH="$AKHOME/bin:$PATH" home=$AKHOME $BB ash anykernel.sh $2;
@@ -499,4 +516,11 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
 
-ui_print " " " " "Done!";
+ui_print "|========================================|";
+ui_print "|       \    /      /\      \    /       |";
+ui_print "|        \  /      /  \      \  /        |";
+ui_print "|         ||      /----\      ||         |";
+ui_print "|         ||     /      \     ||         |";
+ui_print "|========================================|";
+ui_print "| Liquid Kernel Installed Successfully.  |";
+ui_print "|========================================|";
